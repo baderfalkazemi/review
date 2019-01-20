@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sm&j!%s3q-1=9#f7n5g#=6(u^20q*b#k31k9&)6-z-3o^q$wa)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['104.248.252.238']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'review.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django',
+        'USER': 'django',
+        'PASSWORD': '1e5a8f04c60f617f816433f0e7c04d15',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
